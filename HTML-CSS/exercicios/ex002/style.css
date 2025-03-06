@@ -15,7 +15,7 @@ div{
   border-radius: 4px;
 
   & p{
-    color: lightgray;
+    color: #b2b2b2;
     margin: 5px 0px 5px 5px
   }
 }
@@ -27,15 +27,13 @@ h2{
   margin-bottom: 5px;
 }
 
-.forte{
-  font-size: 1.4em;
-}
+span{
+    color: rgb(231, 187, 76);
+    margin: 0px;
+    padding: 0px;
+  }
+  
 
-strong{
-  color: rgb(231, 187, 76);
-  margin: 0px;
-  padding: 0px;
-}
 a{
  display: inline-block;
  margin: 15px 5px 25px 13px;
