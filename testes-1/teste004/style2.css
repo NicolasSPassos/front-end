@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+h1{
+  margin: 0px;
+  padding:10px;
+  background-color: lightblue;
+}
+
+#el1{
+  position: relative;
+  background-color: red;
+  top: 130px;
+  z-index: 3;
+}
+
+#el2{
+  position: relative;
+  background-color: rgb(255, 0, 149);
+  top: 40px;
+  
+}
+
+#el3{
+  position: relative;
+  background-color: yellow;
+  top: 40px;
+}

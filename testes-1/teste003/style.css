@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid {
+ display: grid;
+ margin-top: 50px;
+ grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+ gap: 15px;
+}
+
+h2{
+  background-color: #e7e7e7;
+  border: 1px solid #d7d7d7;
+  padding: 20px;
+  flex: 1;
+  margin:0px;
+}
