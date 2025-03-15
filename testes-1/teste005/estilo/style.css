@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+article{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  article img{
+  grid-row: 2;
+  }
+}
+
+section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+p{
+  font-size: 2rem;
+}
