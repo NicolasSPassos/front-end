@@ -37,6 +37,11 @@ let gravity = 0.4;
 let gameOver = false;
 let score = 0;
 
+let wingSound = new Audio("./sfx_wing.wav");
+let hitSound = new Audio("./sfx_hit.wav");
+let bgm = new Audio("./bgm_mario.mp3");
+bgm.loop = true;
+
 window.onload = function() {
     board = document.getElementById("board");
     board.height = boardHeight;
@@ -94,6 +99,7 @@ function update() {
         }
 
         if (detectCollision(bird, pipe)) {
+            hitSound.play();
             gameOver = true;
         }
     }
@@ -109,7 +115,8 @@ function update() {
     context.fillText(score, 5, 45);
 
     if (gameOver) {
-        context.fillText("GAME OVER", 5, 90);
+        context.fillText("PERDEU", 5, 90);
+        bgm.pause();
     }
 }
 
@@ -147,6 +154,10 @@ function placePipes() {
 
 function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
+        if (bgm.paused) {
+        bgm.play();
+        }
+        wingSound.play();
         //jump
         velocityY = -6;
 
@@ -166,3 +177,4 @@ function detectCollision(a, b) {
            a.y < b.y + b.height &&  //a's top left corner doesn't reach b's bottom left corner
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
 }
+
