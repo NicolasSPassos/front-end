@@ -81,3 +81,6 @@ var cachorro = {
 }
 
 console.log(cachorro.latir('Criança'));
+
+
+
