@@ -1,4 +1,4 @@
-/*const img = document.querySelector('img');
+const img = document.querySelector('img');
 
 img.addEventListener('click',() =>{
 console.log('Clicado')
@@ -12,7 +12,7 @@ function callback(event){
   console.log(event);
 }
 
-imagem2.addEventListener('click', callback);*/
+imagem2.addEventListener('click', callback);
 
 const imagemLista = document.querySelector('.animais-lista');
 
@@ -43,7 +43,7 @@ function evento(){
 console.log(event.type, event)
 
 };
-/*
+
 h1.addEventListener('click', evento);
 
 h1.addEventListener('mouseenter', evento);
@@ -54,7 +54,7 @@ window.addEventListener('scroll', evento);
 
 window.addEventListener('resize', evento);
 
-window.addEventListener('keydown', evento);*/
+window.addEventListener('keydown', evento);
 
 function teclaEvento(event){
   if(event.key === 'f'){
@@ -63,3 +63,14 @@ function teclaEvento(event){
 }
 
 window.addEventListener('keydown', teclaEvento)
+
+const imgs = document.querySelectorAll('img');
+
+function imgSrc(event){
+  const src = event.currentTarget.getAttribute('src');
+  console.log(src);
+}
+
+imgs.forEach((img) => {
+  img.addEventListener('click', imgSrc)
+});
